@@ -43,16 +43,16 @@ class ControlFrame extends PApplet {
 
     cp5.addSlider("STEM_WEIGHT_W")
       .plugTo(parent, "STEM_WEIGHT_W")
-      .setRange(1, 400)
-      .setValue(20)
+      .setRange(1, 50)
+      .setValue(10)
       .setPosition(locX, locY)
       .setFont(font)
       .setSize(200, 30);
 
     cp5.addSlider("STEM_WEIGHT_H")
       .plugTo(parent, "STEM_WEIGHT_H")
-      .setRange(1, 400)
-      .setValue(20)
+      .setRange(1, 50)
+      .setValue(10)
       .setPosition(locX, locY * 3)
       .setFont(font)
       .setSize(200, 30);
@@ -60,16 +60,16 @@ class ControlFrame extends PApplet {
 
     cp5.addSlider("GLIPH_W")
       .plugTo(parent, "GLIPH_W")
-      .setRange(10, 1200)
-      .setValue(200)
+      .setRange(10, 500)
+      .setValue(100)
       .setPosition(locX, locY * 5)
       .setFont(font)
       .setSize(200, 30);
 
     cp5.addSlider("GLIPH_H")
       .plugTo(parent, "GLIPH_H")
-      .setRange(10, 1200)
-      .setValue(200)
+      .setRange(10, 500)
+      .setValue(100)
       .setPosition(locX, locY * 7)
       .setFont(font)
       .setSize(200, 30);
@@ -87,6 +87,14 @@ class ControlFrame extends PApplet {
       .setRange(0, 1)
       .setValue(.5)
       .setPosition(locX, locY * 11)
+      .setFont(font)
+      .setSize(200, 30);
+      
+      cp5.addSlider("AMT_ANGLE_SMOOTHNESS")
+      .plugTo(parent, "AMT_ANGLE_SMOOTHNESS")
+      .setRange(0, 1)
+      .setValue(1)
+      .setPosition(locX, locY * 13)
       .setFont(font)
       .setSize(200, 30);
   }

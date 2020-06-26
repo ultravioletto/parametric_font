@@ -45,7 +45,7 @@ class Handler {
     B .set( _B.x, _B.y);
         //  stroke(int(random(255)));
 
-    show();
+   if(debug) show();
   }
   void update() {
     if (HandlerFirst == null) {
@@ -60,7 +60,7 @@ class Handler {
       B.set(B.x, B.y + (stemWeight.y*offsetY));
       stroke(#8BCEFF);
     }
-    show();
+   if(debug)  show();
   }
 
   void show() {

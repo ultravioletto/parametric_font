@@ -26,21 +26,22 @@ class GridBase {
   void show() {  
     
      noFill();
+   
     strokeWeight(1);
     stroke(colorGuides);
-    
+   
      A.set (0 ,0);
      B.set (GLIPH_W , 0 );
      C.set (GLIPH_W , GLIPH_H );
      D.set (0 , GLIPH_H );
     
-    
+    if(debug){
     beginShape();
       vertex(A.x, A.y);
       vertex(B.x, B.y);
       vertex(C.x, C.y);
       vertex(D.x, D.y);
     endShape(CLOSE);
-    
+    }
   }
 }

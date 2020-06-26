@@ -1,8 +1,8 @@
-int GLIPH_W = 200;   // width of the gliph
-int GLIPH_H = 400;   // height of the gliph
+int GLIPH_W = 100;   // width of the gliph
+int GLIPH_H = 200;   // height of the gliph
 
-float STEM_WEIGHT_W = 190.0;
-float STEM_WEIGHT_H = 190.0;
+float STEM_WEIGHT_W = 80.0;
+float STEM_WEIGHT_H = 80.0;
 
 PVector stemWeight;
 
@@ -44,7 +44,7 @@ O uppecase_O;
 
 
 void settings() {
-  size(1600, 1600);
+  size(1000, 1000);
 }
 
 void setup() {
@@ -52,7 +52,7 @@ void setup() {
   setupControlFrame();
   setupColor();
   //size(1200, 1200);
-  //surface.setLocation(100, 100);
+  surface.setLocation(400, 0);
 
 
 
@@ -91,11 +91,25 @@ void draw() {
 
   background(255);
 
-  int posX = 100;
-  int posY = 100;
+  int posX = 50;
+  int posY = 50;
 
-  int stepX = 250;
-  int stepY = 250;
+  int stepX = 125;
+  int stepY = 225;
+  
+  if(debug){
+     colorBodyVertical = #FF7744;
+ colorBodyHoriz = #8DC63F;
+ colorBodyArc = #785CCB;
+ colorBodyFiller = #465FB7;
+ colorBodySlant = #3CF7AB;} else{
+  colorBodyVertical = 0;
+ colorBodyHoriz = 0;
+ colorBodyArc = 0;
+ colorBodyFiller = 0;
+ colorBodySlant = 0;
+ 
+ }
 
   stemWeight.set(STEM_WEIGHT_W, STEM_WEIGHT_W);
   HANDLER_MIDDLE_H.set(1, HANDLER_MIDDLE_H_Y);
